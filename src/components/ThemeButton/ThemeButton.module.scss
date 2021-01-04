@@ -1,0 +1,29 @@
+.ThemeButton {
+  border: 1px solid gray;
+  border-radius: 3px;
+  min-width: max-content;
+  min-height: 40px;
+  padding: 0 25px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+
+  & svg {
+    padding-right: 5px;
+  }
+
+  &.white {
+    color: white;
+    background: #282c34;
+    transition: 200ms all ease-out;
+  }
+
+  &.dark {
+    color: #282c34;
+    background: white;
+    transition: 200ms all ease-out;
+  }
+}
