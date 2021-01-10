@@ -1,0 +1,22 @@
+.formAdd {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: stretch;
+  height: 40px;
+  padding: 0 2em;
+  border: none;
+  .inputTodo {
+    background: powderblue;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    border: solid lightgray 1px;
+    flex-grow: 1;
+    padding: 0 15px;
+  }
+  .buttonTodo {
+    padding: 0 15px;
+    border-radius: 0 3px 3px 0;
+    border: solid lightgray 1px;
+  }
+}
