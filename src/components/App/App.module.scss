@@ -16,6 +16,17 @@
     color: #282c34;
     transition: 200ms all ease-out;
   }
+
+  .microfrontends {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    color: white;
+    margin: 20px;
+    height: 600px;
+    width: 500px;
+    background: gray;
+  }
 }
 
 .AppHeader {
