@@ -17,16 +17,23 @@ const Home = () => (
     </>
 );
 
-const CreateReactApp = ({ history }) => (
+const CreateReactApp = ({ history, data }) => (
     <MicroFrontend
         history={history}
         host={'http://localhost:3001'}
         name="createreactapp"
+        data={data}
     />
 );
 
+const newData = [
+    { label: 'First Container', id: 1, done: false, important: true },
+    { label: 'From MAIN domain', id: 3, done: true, important: true }
+];
+
 CreateReactApp.propTypes = {
-    history: PropTypes.object
+    history: PropTypes.object,
+    data: PropTypes.array
 };
 
 const App = () => {
@@ -65,7 +72,7 @@ const App = () => {
 
                     <Switch>
                         <Route path="/home" component={Home} />
-                        <Route path="/createreactapp" render={() => <CreateReactApp />} />
+                        <Route path="/createreactapp" render={() => <CreateReactApp data={newData} />} />
                     </Switch>
                 </BrowserRouter>
             </div>
