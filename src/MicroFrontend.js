@@ -34,9 +34,9 @@ class MicroFrontend extends React.Component {
     }
 
     renderMicroFrontend = () => {
-        const { name, window, history } = this.props;
+        const { name, window, history, data } = this.props;
 
-        window[`render${name}`] && window[`render${name}`](`${name}-container`, history);
+        window[`render${name}`] && window[`render${name}`](`${name}-container`, history, data);
     };
 
     render() {
@@ -54,7 +54,8 @@ MicroFrontend.propTypes = {
     window: PropTypes.object,
     history: PropTypes.object,
     document: PropTypes.object,
-    host: PropTypes.string
+    host: PropTypes.string,
+    data: PropTypes.array
 };
 
 export default MicroFrontend;
